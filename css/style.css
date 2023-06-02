@@ -10,5 +10,108 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.container{
+    width: 80%;
+    margin: auto;
+}
 
 
+/* ==========FOOTER SECTION START=========== */
+footer{
+    width: 100%;
+    padding: 50px 0;
+    background-color: rgb(0, 13, 26);
+}
+footer .container .row{
+    display: flex;
+}
+footer .container .row .footer-col{
+    width: 25%;
+}
+footer .container .row .footer-col h3{
+    font-size: 25px;
+    color: azure;
+    margin-bottom: 25px;
+
+    position: relative;
+}
+footer .container .row .footer-col h3::after{
+    content: '';
+    width: 0;
+    height: 0;
+    background-color: rgba(220, 20, 60, 0);
+
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+
+    transition: 0.3s;
+}
+footer .container .row .footer-col h3:hover::after{
+    width: 100px;
+    height: 4px;
+    border-radius: 1px;
+    background-color: crimson;
+}
+footer .container .row .footer-col ul li:not(:last-child){
+    margin-bottom: 8px;
+}
+footer .container .row .footer-col ul li a{
+    color: rgba(240, 255, 255, 0.687);
+    font-size: 16px;
+}
+footer .container .row .footer-col .social-links i{
+    color: rgba(240, 255, 255, 0.687);
+    display: inline-block;
+    background-color: rgba(240, 255, 255, 0.203);
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 50%;
+    margin: 0 3px;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+footer .container .row .footer-col .social-links i:hover{
+    color: rgb(0, 13, 26);
+    background-color: rgba(240, 255, 255, 0.687);
+}
+/* ==========FOOTER SECTION END=========== */
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERI */
+@media screen and (max-width: 992px){
+    footer .container .row{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    footer .container .row .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+@media screen and (max-width: 768px){
+    footer .container .row .footer-col{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    footer .container .row .footer-col{
+        text-align: center;
+    }
+    footer .container .row .footer-col h3::after{
+        position: absolute;
+        left: 50%;
+        bottom: -8px;
+        transform: translateX(-50%);
+    }
+}
